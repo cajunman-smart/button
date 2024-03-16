@@ -153,7 +153,7 @@ local device_init = function(self, device)
 
   if device.network_type ~= device_lib.NETWORK_TYPE_ZIGBEE then
     log.warn("Device is not Zigbee")
-    device:emit_event(capabilities.button.supportedButtonValues({"pushed", "pushed_2x", "held"},
+    device:emit_event(capabilities.button.supportedButtonValues({"pushed", "pushed_2x", "pushed_3x", "pushed_4x", "pushed_5x", "held"}, 
                                       { visibility = { displayed = false } }))
 
     return
